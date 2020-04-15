@@ -2,7 +2,7 @@ var inquirer = require("inquirer");
 var fs = require("fs");
 var util = require("util");
 
-const writeReadAsync = util.promisify(fs.writeFile);
+const createReadAsync = util.promisify(fs.writeFile);
 //inside the const questions?
 
 const questions = [
@@ -55,8 +55,19 @@ const questions = [
 function writeToFile(fileName, data) {
 }
 
-function init() {
+async function init() {
+    try {
+        const input = await questions();
 
+        const read = writeToFile(input);
+
+        await createReadAsync("readMe.md", read);
+
+        console.log("Succesfully wrote ReadMe.md")
+
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 init();
