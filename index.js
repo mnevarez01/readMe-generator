@@ -2,8 +2,7 @@ var inquirer = require("inquirer");
 var fs = require("fs");
 var util = require("util");
 
-const createReadAsync = util.promisify(fs.writeFile);
-//inside the const questions?
+const createReadAsync = util.promisify(fs.writeFile)
 
 function questions() {
     inquirer.prompt([
@@ -32,8 +31,14 @@ function questions() {
         },
         {
             type: "input",
-            message: "What command would you need to clone?",
-            name: "clone"
+            message: "What command would you need to install?",
+            name: "install"
+
+        },
+        {
+            type: "input",
+            message: "Who has contributed to this project?",
+            name: "contribute"
 
         },
         {
@@ -43,18 +48,43 @@ function questions() {
 
         },
         {
-            type: "input",
-            message: "What do we need to know to contribute?",
-            name: "contribute"
+            type: "checkbox",
+            message: "What license is this project under?",
+            name: "license",
+            choices: ["MIT", "GNU", "BSD", "Apache"]
 
         },
-
     ])
 }
 
 
 function writeToFile(input) {
     return `
+    # ${input.projectName}
+
+### *Description:*
+${input.description}
+
+## **Getting Started**
+Want to get get started with your own here is what you will need. 
+
+### *Installing:*
+To clone you will need: 
+${input.install}
+
+### *Running Tests:*
+You will need to ${input.testing}
+
+## **Contributing**
+The contributing parties are ${input.contribute}
+
+## **License**
+
+This project is licensed under ${input.license}
+
+## **Questions**
+If you have any questions please follow link to my Github: 
+
 
 `
 
@@ -75,4 +105,4 @@ async function init() {
     }
 }
 
-init();
+
