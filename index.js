@@ -61,7 +61,7 @@ function questions() {
 function writeToFile(input) {
     return `
 # ${input.projectName}
-
+![npm](https://img.shields.io/npm/v/readme.md)
 
 ### *Description:*
 ${input.description}
