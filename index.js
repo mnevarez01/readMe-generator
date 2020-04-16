@@ -5,7 +5,7 @@ var util = require("util");
 const createReadAsync = util.promisify(fs.writeFile)
 
 function questions() {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             message: "What is your github username?",
@@ -60,7 +60,7 @@ function questions() {
 
 function writeToFile(input) {
     return `
-    # ${input.projectName}
+# ${input.projectName}
 
 ### *Description:*
 ${input.description}
@@ -83,26 +83,26 @@ The contributing parties are ${input.contribute}
 This project is licensed under ${input.license}
 
 ## **Questions**
-If you have any questions please follow link to my Github: 
-
-
-`
+If you have any questions please feel free to reach out:
+GitHub: https://github.com/${input.username}
+Email: ${input.email}
+`;
 
 }
 
 async function init() {
     try {
-        const input = await questions();
+        const answers = await questions();
 
-        const read = writeToFile(input);
+        const read = writeToFile(answers);
 
         await createReadAsync("README.md", read);
 
-        console.log("Succesfully wrote ReadMe.md")
+        console.log("Successfully wrote README.md")
 
     } catch (err) {
         console.log(err);
     }
 }
 
-
+init();
