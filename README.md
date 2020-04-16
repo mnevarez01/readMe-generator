@@ -22,6 +22,7 @@ You will be prompted with a set of questions so that we can generate your README
 ## **Created with**
 * JavaScript 
 * Inquire Package: (https://www.npmjs.com/package/inquire)
+* Axios Package: (https://www.npmjs.com/package/axios)
 * Deployed using Node.js
 
 ## **License**
