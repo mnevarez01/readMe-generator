@@ -62,7 +62,7 @@ function questions() {
 function writeToFile(input) {
     return `
 # ${input.projectName}
-![npm](https://img.shields.io/npm/v/readme.md)
+![npm](https://img.shields.io/static/v1?label=npm&message=${input.license`}&color=orange)
 
 ### *Description:*
 ${input.description}
@@ -98,11 +98,11 @@ async function init() {
     try {
         const answers = await questions();
 
-        const img = await //adding github api to get image?
+        // const img = await //adding github api to get image?
 
         const read = writeToFile(answers);
 
-        await createReadAsync("node.txt", read);
+        await createReadAsync("newREADME.md", read);
 
         console.log("Successfully wrote README.md")
 

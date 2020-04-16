@@ -1,5 +1,5 @@
 # README-generator 
-![npm](https://img.shields.io/npm/v/readme.md)
+![npm](https://img.shields.io/static/v1?label=License&message=MIT&color=9cf)
 
 ## Table of Contents:
 * [Description](###-*Description:*)
