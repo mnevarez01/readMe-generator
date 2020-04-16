@@ -62,6 +62,7 @@ function writeToFile(input) {
     return `
 # ${input.projectName}
 
+
 ### *Description:*
 ${input.description}
 
@@ -96,7 +97,7 @@ async function init() {
 
         const read = writeToFile(answers);
 
-        await createReadAsync("README.md", read);
+        await createReadAsync("node.txt", read);
 
         console.log("Successfully wrote README.md")
 

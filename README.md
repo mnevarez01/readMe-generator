@@ -1,4 +1,5 @@
 # README-generator 
+![npm](https://img.shields.io/npm/v/readme.md)
 
 ### *Description:*
 This project will allow you to create a README.MD with little effort.
