@@ -1,6 +1,7 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 var util = require("util");
+var axios = require("axios")
 
 const createReadAsync = util.promisify(fs.writeFile)
 
@@ -91,9 +92,13 @@ Email: ${input.email}
 
 }
 
+
+
 async function init() {
     try {
         const answers = await questions();
+
+        const img = await //adding github api to get image?
 
         const read = writeToFile(answers);
 
