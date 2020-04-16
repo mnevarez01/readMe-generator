@@ -11,7 +11,9 @@ You will need too deploy this project using node command. In your *terminal* or 
 ![Initial Deployment](/img/readme.png)
 
 ## **Created with**
-JavaScript using Node.js
+* JavaScript 
+* Inquire Package: (https://www.npmjs.com/package/inquire)
+* Deployed using Node.js
 
 ## **License**
 
