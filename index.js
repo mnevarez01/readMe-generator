@@ -1,7 +1,7 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 var util = require("util");
-var axios = require("axios")
+var axios = require("axios");
 
 const createReadAsync = util.promisify(fs.writeFile)
 
@@ -62,7 +62,17 @@ function questions() {
 function writeToFile(input) {
     return `
 # ${input.projectName}
-![npm](https://img.shields.io/static/v1?label=npm&message=${input.license`}&color=orange)
+![npm](https://img.shields.io/static/v1?label=npm&message=${input.license}&color=orange)
+
+## Table of Contents:
+* [Description](###-*Description:*)
+* [Getting Started](###-**Getting-Started**)
+* [Installing](###-*Installing:*)
+* [Running Tests](###-*Running-Tests:*)
+* [Contributing](##-**Contributing**)
+* [License](##-**License**)
+* [Questions](##-**Questions**)
+
 
 ### *Description:*
 ${input.description}
@@ -88,8 +98,7 @@ This project is licensed under ${input.license}
 If you have any questions please feel free to reach out:
 GitHub: https://github.com/${input.username}
 Email: ${input.email}
-`;
-
+`
 }
 
 
@@ -98,7 +107,7 @@ async function init() {
     try {
         const answers = await questions();
 
-        // const img = await //adding github api to get image?
+        // ! const img = await //adding github api to get image?
 
         const read = writeToFile(answers);
 

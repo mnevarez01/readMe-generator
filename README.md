@@ -18,6 +18,8 @@ You will need too deploy this project using node command. In your *terminal* or 
 ## **Deployed Examples**
 You will be prompted with a set of questions so that we can generate your README.md file.
 ![Initial Deployment](/img/readme.PNG)
+Once that process is done it will generate a README.md file. Image below is displaying what you will see using VS Code Preview README.md
+![Initial Deployment](/img/readme2.PNG)
 
 ## **Created with**
 * JavaScript 
