@@ -1,26 +1,27 @@
-
-# Test
+# README-generator 
 
 ### *Description:*
-djfasdf
+This project will allow you to create a README.MD with little effort.
 
-## **Getting Started**
-Want to get get started with your own here is what you will need. 
+## **Deployed Examples**
+![Initial Deployment](/img/readme.png)
 
-### *Installing:*
-To clone you will need: 
-ajdsfjf'
-
-### *Running Tests:*
-You will need to djfaslf
 
 ## **Contributing**
-The contributing parties are lol
+The contributing parties are 
 
 ## **License**
 
 This project is licensed under MIT
 
-## **Questions**
-If you have any questions please follow link to my Github: 
+
+
+
+
+
+
+
+
+
+
 
