@@ -1,7 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 var util = require("util");
-var axios = require("axios");
 
 const createReadAsync = util.promisify(fs.writeFile)
 
@@ -97,6 +96,7 @@ This project is licensed under ${input.license}
 ## **Questions**
 If you have any questions please feel free to reach out:
 GitHub: https://github.com/${input.username}
+
 Email: ${input.email}
 `
 }
@@ -107,11 +107,9 @@ async function init() {
     try {
         const answers = await questions();
 
-        // ! const img = await //adding github api to get image?
-
         const read = writeToFile(answers);
 
-        await createReadAsync("newREADME.md", read);
+        await createReadAsync("README.md", read);
 
         console.log("Successfully wrote README.md")
 
